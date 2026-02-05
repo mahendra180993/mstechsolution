@@ -1,0 +1,12 @@
+{
+  "name": "ms-tech-solutions",
+  "version": "1.0.0",
+  "description": "MS Tech Solution Website",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

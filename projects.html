@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Our Projects | Web & Software Development Portfolio – MS Tech</title>
+    <meta name="description" content="Explore real-world web, software, and IT projects delivered by MS Tech Solution. View our portfolio showcasing innovative, scalable digital solutions.">
+    <meta name="keywords" content="web development projects portfolio, software development company projects, IT company project portfolio, website development work examples, custom software development projects, web design and development projects, India IT company portfolio">
+    
+    <!-- Canonical Tag -->
+    <link rel="canonical" href="https://mstechsolution.in/projects" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mstechsolution.in/projects" />
+    <meta property="og:title" content="Our Projects | Web & Software Development Portfolio – MS Tech" />
+    <meta property="og:description" content="Explore real-world web, software, and IT projects delivered by MS Tech Solution. View our portfolio showcasing innovative, scalable digital solutions." />
+    <meta property="og:image" content="https://mstechsolution.in/imgs/full-logo.png" />
+    <meta property="og:site_name" content="MS Tech Solution" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://mstechsolution.in/projects" />
+    <meta name="twitter:title" content="Our Projects | Web & Software Development Portfolio – MS Tech" />
+    <meta name="twitter:description" content="Explore real-world web, software, and IT projects delivered by MS Tech Solution. View our portfolio showcasing innovative, scalable digital solutions." />
+    <meta name="twitter:image" content="https://mstechsolution.in/imgs/full-logo.png" />
+    
+    <!-- Google Search Console Verification -->
+    <meta name="google-site-verification" content="Lakaq8QNBlRoCZK6LVxX6rW7UUnT8jHRGUulFVt4PY4" />
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MQD7VNCQ');</script>
+    <!-- End Google Tag Manager -->
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VGZJ4EMTEP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-VGZJ4EMTEP');
+    </script>
+    
+    <link rel="icon" type="image/png" href="imgs/favicon.png">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-blue': '#1E88E5',
+                        'accent-blue': '#4FC3F7',
+                        'dark-navy': '#0A1A2F',
+                        'text-white': '#F5F9FF',
+                        'text-gray': '#B0BEC5',
+                    },
+                    fontFamily: {
+                        'heading': ['Orbitron', 'sans-serif'],
+                        'body': ['Inter', 'Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Shared CSS -->
+    <link rel="stylesheet" href="css/shared.css">
+    
+    <style>
+        /* Project card hover glow effect */
+        .project-card {
+            transition: all 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(242, 208, 138, 0.2), 0 0 0 1px rgba(255, 223, 163, 0.3);
+        }
+        
+        /* Project card image hover effect */
+        .project-card img {
+            transition: transform 0.5s ease;
+        }
+        
+        .project-card:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* Hover overlay animation */
+        .project-overlay {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .project-card:hover .project-overlay {
+            opacity: 1;
+        }
+        
+        /* Button glow on hover */
+        .btn-view-project {
+            transition: all 0.3s ease;
+        }
+        
+        .project-card:hover .btn-view-project {
+            background-color: #FFDFA3;
+            box-shadow: 0 4px 20px rgba(255, 223, 163, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-[#0A1A2F] text-[#F5F9FF] antialiased font-body">
+    
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MQD7VNCQ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+    <!-- Navigation -->
+    <div id="navbar-container"></div>
+    
+    <!-- Hero Section -->
+    <section class="relative w-full min-h-screen flex items-center justify-center bg-[#0A1A2F] text-white pt-20 md:pt-24 pb-16 md:pb-20 border-b border-[#1E88E5]/30 overflow-hidden">
+        <canvas id="hero-canvas" class="absolute inset-0 w-full h-full"></canvas>
+        <div class="absolute inset-0 bg-gradient-to-b from-[#0A1A2F]/80 via-transparent to-[#0A1A2F]/80"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold mb-6 leading-tight">
+                Our <span class="bg-gradient-to-r from-[#1E88E5] to-[#4FC3F7] bg-clip-text text-transparent">Projects</span>
+            </h1>
+            <p class="text-lg sm:text-xl md:text-2xl text-[#B0BEC5] max-w-3xl mx-auto">
+                Showcasing real-world solutions delivered with excellence and creativity
+            </p>
+        </div>
+    </section>
+    
+    <!-- Category Filter Section -->
+    <section class="py-8 bg-[#0A1A2F]/60 backdrop-blur-sm border-b border-[#1E88E5]/30 sticky top-16 md:top-20 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap justify-center gap-4 fade-in">
+                <button class="filter-btn active px-6 py-2 bg-gradient-to-r from-[#1E88E5] to-[#4FC3F7] text-white font-semibold rounded-lg hover:from-[#1976D2] hover:to-[#29B6F6] transition-all duration-300" data-filter="all">
+                    All Projects
+                </button>
+                <button class="filter-btn px-6 py-2 bg-[#0A1A2F]/60 backdrop-blur-sm border border-[#1E88E5]/30 text-[#B0BEC5] font-semibold rounded-lg hover:bg-[#0A1A2F]/80 hover:border-[#4FC3F7] hover:text-[#4FC3F7] transition-all duration-300" data-filter="interior">
+                    Interior Design
+                </button>
+                <button class="filter-btn px-6 py-2 bg-[#0A1A2F]/60 backdrop-blur-sm border border-[#1E88E5]/30 text-[#B0BEC5] font-semibold rounded-lg hover:bg-[#0A1A2F]/80 hover:border-[#4FC3F7] hover:text-[#4FC3F7] transition-all duration-300" data-filter="tax">
+                    Tax Services
+                </button>
+                <button class="filter-btn px-6 py-2 bg-[#0A1A2F]/60 backdrop-blur-sm border border-[#1E88E5]/30 text-[#B0BEC5] font-semibold rounded-lg hover:bg-[#0A1A2F]/80 hover:border-[#4FC3F7] hover:text-[#4FC3F7] transition-all duration-300" data-filter="printing">
+                    Printing & ID Cards
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Projects Grid Section -->
+    <section class="py-20 md:py-32 bg-[#0A1A2F]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+                
+                <!-- Project 1: Trika Interior Design -->
+                <div class="project-card bg-[#0A1A2F]/60 backdrop-blur-sm border border-[#1E88E5]/30 rounded-2xl overflow-hidden cursor-pointer fade-in" data-category="interior" onclick="window.open('https://trika.co.in/', '_blank', 'noopener,noreferrer')">
+                    <div class="aspect-video bg-[#0A1A2F] relative overflow-hidden">
+                        <img src="https://res.cloudinary.com/dn7vhrh6r/image/upload/v1766414882/DSC07016-1536x1024_aw2ixf.jpg" alt="Trika Interior Design Website" 
+                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <!-- Fallback if image not found -->
+                        <div class="hidden absolute inset-0 bg-gradient-to-br from-[#1B2A2E] via-[#0F1A1C] to-[#1B2A2E] items-center justify-center">
+                            <div class="text-center">
+                                <svg class="w-16 h-16 bg-gradient-to-r from-[#1E88E5] to-[#4FC3F7] bg-clip-text text-transparent/30 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                                </svg>
+                                <span class="text-[#B0BEC5] text-sm">Trika Interior Design</span>
+                            </div>
+                        </div>
+                        <!-- Overlay on hover -->
+                        <div class="project-overlay absolute inset-0 bg-[#0A1A2F]/90 flex items-center justify-center">
+                            <span class="bg-gradient-to-r from-[#1E88E5] to-[#4FC3F7] bg-clip-text text-transparent text-sm font-semibold">Elegant Interior Solutions</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="px-3 py-1 bg-[#0A1A2F] border border-[#1E88E5]/30 bg-gradient-to-r from-[#1E88E5] to-[#4FC3F7] bg-clip-text text-transparent rounded-full text-xs font-medium">Interior</span>
+                            <span class="px-3 py-1 bg-[#0A1A2F] border border-[#1E88E5]/30 text-[#B0BEC5] rounded-full text-xs font-medium">Web Design</span>
+                        </div>
+                        <h3 class="text-2xl font-heading font-bold mb-3 text-[#F5F9FF]">Trika Interior Design</h3>
+                        <p class="text-[#B0BEC5] mb-4 leading-relaxed">
+                            Luxurious interior design showcase with elegant aesthetics. Premium presentation of design excellence and creative spaces.
+                        </p>
+                        <a href="https://trika.co.in/" target="_blank" rel="noopener noreferrer" class="btn-view-project inline-block px-6 py-3 bg-gradient-to-r from-[#1E88E5] to-[#4FC3F7] text-white font-semibold rounded-lg hover:from-[#1976D2] hover:to-[#29B6F6] transition-all duration-300">
+                            View Live Project →
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 2: Wood Vibes Interior -->
+                <div class="project-card bg-[#0A1A2F]/60 backdrop-blur-sm border border-[#1E88E5]/30 rounded-2xl overflow-hidden cursor-pointer fade-in" data-category="interior" onclick="window.open('https://woodvibes.co.in/', '_blank', 'noopener,noreferrer')">
+                    <div class="aspect-video bg-[#0A1A2F] relative overflow-hidden">
+                        <img src="https://res.cloudinary.com/dn7vhrh6r/image/upload/v1765957366/about_us_banner_woodvibes_a4ng5o.png" alt="Wood Vibes Interior Design Website" 
+                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <!-- Fallback if image not found -->
+                        <div class="hidden absolute inset-0 bg-gradient-to-br from-[#1B2A2E] via-[#0F1A1C] to-[#1B2A2E] items-center justify-center">
+                            <div class="text-center">
+                                <svg class="w-16 h-16 bg-gradient-to-r from-[#1E88E5] to-[#4FC3F7] bg-clip-text text-transparent/30 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                                </svg>
+                                <span class="text-[#B0BEC5] text-sm">Wood Vibes</span>
+                            </div>
+                        </div>
+                        <div class="project-overlay absolute inset-0 bg-[#0A1A2F]/90 flex items-center justify-center">
+                            <span class="bg-gradient-to-r from-[#1E88E5] to-[#4FC3F7] bg-clip-text text-transparent text-sm font-semibold">Wood & Warmth</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="px-3 py-1 bg-[#0A1A2F] border border-[#1E88E5]/30 bg-gradient-to-r from-[#1E88E5] to-[#4FC3F7] bg-clip-text text-transparent rounded-full text-xs font-medium">Interior</span>
+                            <span class="px-3 py-1 bg-[#0A1A2F] border border-[#1E88E5]/30 text-[#B0BEC5] rounded-full text-xs font-medium">Web Design</span>
+                        </div>
+                        <h3 class="text-2xl font-heading font-bold mb-3 text-[#F5F9FF]">Wood Vibes</h3>
+                        <p class="text-[#B0BEC5] mb-4 leading-relaxed">
+                            Natural wood-inspired interior design platform. Warm, organic aesthetic showcasing sustainable and elegant living spaces.
+                        </p>
+                        <a href="https://woodvibes.co.in/" target="_blank" rel="noopener noreferrer" class="btn-view-project inline-block px-6 py-3 bg-gradient-to-r from-[#1E88E5] to-[#4FC3F7] text-white font-semibold rounded-lg hover:from-[#1976D2] hover:to-[#29B6F6] transition-all duration-300">
+                            View Live Project →
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 3: Brown Wood Interiors -->
+                <div class="project-card bg-[#0A1A2F]/60 backdrop-blur-sm border border-[#1E88E5]/30 rounded-2xl overflow-hidden cursor-pointer fade-in" data-category="interior" onclick="window.open('https://brownwoodinteriors.in/', '_blank', 'noopener,noreferrer')">
+                    <div class="aspect-video bg-[#0A1A2F] relative overflow-hidden">
+                        <img src="https://res.cloudinary.com/dm43v3tzg/image/upload/v1767960444/kichen-1_rlfysc.jpg" alt="Brown Wood Interiors Website" 
+                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <!-- Fallback if image not found -->
+                        <div class="hidden absolute inset-0 bg-gradient-to-br from-[#1B2A2E] via-[#0F1A1C] to-[#1B2A2E] items-center justify-center">
+                            <div class="text-center">
+                                <svg class="w-16 h-16 bg-gradient-to-r from-[#1E88E5] to-[#4FC3F7] bg-clip-text text-transparent/30 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                                </svg>
+                                <span class="text-[#B0BEC5] text-sm">Brown Wood Interiors</span>
+                            </div>
+                        </div>
+                        <div class="project-overlay absolute inset-0 bg-[#0A1A2F]/90 flex items-center justify-center">
+                            <span class="bg-gradient-to-r from-[#1E88E5] to-[#4FC3F7] bg-clip-text text-transparent text-sm font-semibold">Premium Interiors</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="px-3 py-1 bg-[#0A1A2F] border border-[#1E88E5]/30 bg-gradient-to-r from-[#1E88E5] to-[#4FC3F7] bg-clip-text text-transparent rounded-full text-xs font-medium">Interior</span>
+                            <span class="px-3 py-1 bg-[#0A1A2F] border border-[#1E88E5]/30 text-[#B0BEC5] rounded-full text-xs font-medium">Web Design</span>
+                        </div>
+                        <h3 class="text-2xl font-heading font-bold mb-3 text-[#F5F9FF]">Brown Wood Interiors</h3>
+                        <p class="text-[#B0BEC5] mb-4 leading-relaxed">
+                            Sophisticated interior design portfolio with premium aesthetics. Showcasing refined spaces and elegant design solutions.
+                        </p>
+                        <a href="https://brownwoodinteriors.in/" target="_blank" rel="noopener,noreferrer" class="btn-view-project inline-block px-6 py-3 bg-gradient-to-r from-[#1E88E5] to-[#4FC3F7] text-white font-semibold rounded-lg hover:from-[#1976D2] hover:to-[#29B6F6] transition-all duration-300">
+                            View Live Project →
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 4: Eazy Tax Solutions -->
+                <div class="project-card bg-[#0A1A2F]/60 backdrop-blur-sm border border-[#1E88E5]/30 rounded-2xl overflow-hidden cursor-pointer fade-in" data-category="tax" onclick="window.open('https://eazytaxsolutions.com/', '_blank', 'noopener,noreferrer')">
+                    <div class="aspect-video bg-[#0A1A2F] relative overflow-hidden">
+                        <img src="https://eazytaxsolutions.com/wp-content/uploads/2023/10/home3-main-image.png" alt="Eazy Tax Solutions Website" 
+                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <!-- Fallback if image not found -->
+                        <div class="hidden absolute inset-0 bg-gradient-to-br from-[#1B2A2E] via-[#0F1A1C] to-[#1B2A2E] items-center justify-center">
+                            <div class="text-center">
+                                <div class="w-24 h-24 border-4 border-[#1E88E5]/50 rounded-full mx-auto mb-4 flex items-center justify-center">
+                                    <svg class="w-12 h-12 bg-gradient-to-r from-[#1E88E5] to-[#4FC3F7] bg-clip-text text-transparent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                    </svg>
+                                </div>
+                                <span class="text-[#B0BEC5] text-sm">Eazy Tax Solutions</span>
+                            </div>
+                        </div>
+                        <div class="project-overlay absolute inset-0 bg-[#0A1A2F]/90 flex items-center justify-center">
+                            <span class="bg-gradient-to-r from-[#1E88E5] to-[#4FC3F7] bg-clip-text text-transparent text-sm font-semibold">Tax & Accounting Services</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="px-3 py-1 bg-[#0A1A2F] border border-[#1E88E5]/30 bg-gradient-to-r from-[#1E88E5] to-[#4FC3F7] bg-clip-text text-transparent rounded-full text-xs font-medium">Tax</span>
+                            <span class="px-3 py-1 bg-[#0A1A2F] border border-[#1E88E5]/30 text-[#B0BEC5] rounded-full text-xs font-medium">Service</span>
+                        </div>
+                        <h3 class="text-2xl font-heading font-bold mb-3 text-[#F5F9FF]">Eazy Tax Solutions</h3>
+                        <p class="text-[#B0BEC5] mb-4 leading-relaxed">
+                            Professional tax and accounting service platform. Expert tax preparation, ITIN assistance, and comprehensive tax consulting for individuals and businesses.
+                        </p>
+                        <a href="https://eazytaxsolutions.com/" target="_blank" rel="noopener noreferrer" class="btn-view-project inline-block px-6 py-3 bg-gradient-to-r from-[#1E88E5] to-[#4FC3F7] text-white font-semibold rounded-lg hover:from-[#1976D2] hover:to-[#29B6F6] transition-all duration-300">
+                            View Live Project →
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 5: Manas Mart ID -->
+                <div class="project-card bg-[#0A1A2F]/60 backdrop-blur-sm border border-[#1E88E5]/30 rounded-2xl overflow-hidden cursor-pointer fade-in" data-category="printing" onclick="window.open('https://manasmartid.com/', '_blank', 'noopener noreferrer')">
+                    <div class="aspect-video bg-[#0A1A2F] relative overflow-hidden">
+                        <img src="https://res.cloudinary.com/ddfmuyav4/image/upload/v1759304011/idp_qwl4d8.jpg" alt="Manas Mart ID Website" 
+                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <!-- Fallback if image not found -->
+                        <div class="hidden absolute inset-0 bg-gradient-to-br from-[#1B2A2E] via-[#0F1A1C] to-[#1B2A2E] items-center justify-center">
+                            <div class="text-center">
+                                <svg class="w-16 h-16 bg-gradient-to-r from-[#1E88E5] to-[#4FC3F7] bg-clip-text text-transparent/30 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2" />
+                                </svg>
+                                <span class="text-[#B0BEC5] text-sm">Manas Mart ID</span>
+                            </div>
+                        </div>
+                        <div class="project-overlay absolute inset-0 bg-[#0A1A2F]/90 flex items-center justify-center">
+                            <span class="bg-gradient-to-r from-[#1E88E5] to-[#4FC3F7] bg-clip-text text-transparent text-sm font-semibold">ID Solutions</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="px-3 py-1 bg-[#0A1A2F] border border-[#1E88E5]/30 bg-gradient-to-r from-[#1E88E5] to-[#4FC3F7] bg-clip-text text-transparent rounded-full text-xs font-medium">Printing</span>
+                            <span class="px-3 py-1 bg-[#0A1A2F] border border-[#1E88E5]/30 text-[#B0BEC5] rounded-full text-xs font-medium">ID Cards</span>
+                        </div>
+                        <h3 class="text-2xl font-heading font-bold mb-3 text-[#F5F9FF]">Manas Mart ID</h3>
+                        <p class="text-[#B0BEC5] mb-4 leading-relaxed">
+                            Functional ID card printing service platform. Clean, business-focused design for efficient order management and printing services.
+                        </p>
+                        <a href="https://manasmartid.com/" target="_blank" rel="noopener noreferrer" class="btn-view-project inline-block px-6 py-3 bg-gradient-to-r from-[#1E88E5] to-[#4FC3F7] text-white font-semibold rounded-lg hover:from-[#1976D2] hover:to-[#29B6F6] transition-all duration-300">
+                            View Live Project →
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 6: DR Graphics -->
+                <div class="project-card bg-[#0A1A2F]/60 backdrop-blur-sm border border-[#1E88E5]/30 rounded-2xl overflow-hidden cursor-pointer fade-in" data-category="printing" onclick="window.open('https://drgraphics01.netlify.app/', '_blank', 'noopener noreferrer')">
+                    <div class="aspect-video bg-[#0A1A2F] relative overflow-hidden">
+                        <img src="https://res.cloudinary.com/ddfmuyav4/image/upload/v1759304011/pr_otp3bg.jpg" alt="DR Graphics Website" 
+                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <!-- Fallback if image not found -->
+                        <div class="hidden absolute inset-0 bg-gradient-to-br from-[#1B2A2E] via-[#0F1A1C] to-[#1B2A2E] items-center justify-center">
+                            <div class="text-center">
+                                <svg class="w-16 h-16 bg-gradient-to-r from-[#1E88E5] to-[#4FC3F7] bg-clip-text text-transparent/30 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+                                </svg>
+                                <span class="text-[#B0BEC5] text-sm">DR Graphics</span>
+                            </div>
+                        </div>
+                        <div class="project-overlay absolute inset-0 bg-[#0A1A2F]/90 flex items-center justify-center">
+                            <span class="bg-gradient-to-r from-[#1E88E5] to-[#4FC3F7] bg-clip-text text-transparent text-sm font-semibold">Print Solutions</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="px-3 py-1 bg-[#0A1A2F] border border-[#1E88E5]/30 bg-gradient-to-r from-[#1E88E5] to-[#4FC3F7] bg-clip-text text-transparent rounded-full text-xs font-medium">Printing</span>
+                            <span class="px-3 py-1 bg-[#0A1A2F] border border-[#1E88E5]/30 text-[#B0BEC5] rounded-full text-xs font-medium">Graphics</span>
+                        </div>
+                        <h3 class="text-2xl font-heading font-bold mb-3 text-[#F5F9FF]">DR Graphics</h3>
+                        <p class="text-[#B0BEC5] mb-4 leading-relaxed">
+                            Professional printing and graphics service platform. Straightforward, utility-focused design for reliable business printing needs.
+                        </p>
+                        <a href="https://drgraphics01.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn-view-project inline-block px-6 py-3 bg-gradient-to-r from-[#1E88E5] to-[#4FC3F7] text-white font-semibold rounded-lg hover:from-[#1976D2] hover:to-[#29B6F6] transition-all duration-300">
+                            View Live Project →
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    <!-- Stats Section -->
+    <section class="py-20 md:py-32 bg-[#0A1A2F]/60 backdrop-blur-sm border-t border-[#1E88E5]/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="fade-in">
+                    <div class="bg-gradient-to-r from-[#1E88E5] to-[#4FC3F7] bg-clip-text text-transparent">40+</div>
+                    <div class="text-[#B0BEC5] font-medium">Projects Done</div>
+                </div>
+                <div class="fade-in">
+                    <div class="bg-gradient-to-r from-[#1E88E5] to-[#4FC3F7] bg-clip-text text-transparent">20+</div>
+                    <div class="text-[#B0BEC5] font-medium">Happy Clients</div>
+                </div>
+                <div class="fade-in">
+                    <div class="bg-gradient-to-r from-[#1E88E5] to-[#4FC3F7] bg-clip-text text-transparent">100%</div>
+                    <div class="text-[#B0BEC5] font-medium">Client Satisfaction</div>
+                </div>
+                <div class="fade-in">
+                    <div class="bg-gradient-to-r from-[#1E88E5] to-[#4FC3F7] bg-clip-text text-transparent">24/7</div>
+                    <div class="text-[#B0BEC5] font-medium">Support Available</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="py-20 md:py-32 bg-[#0A1A2F] border-t border-[#1E88E5]/30">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in">
+            <h2 class="text-3xl md:text-5xl font-heading font-bold mb-6 text-[#F5F9FF]">Have a Project in Mind?</h2>
+            <p class="text-lg md:text-xl mb-8 text-[#B0BEC5] max-w-2xl mx-auto">
+                Let's discuss your project and bring your vision to life. Contact us for a free consultation.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="/contact" class="px-8 py-4 bg-gradient-to-r from-[#1E88E5] to-[#4FC3F7] hover:from-[#1976D2] hover:to-[#29B6F6] text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                    Start Your Project
+                </a>
+                <a href="/services" class="px-8 py-4 bg-[#0A1A2F]/60 backdrop-blur-sm border border-[#1E88E5]/30 hover:border-[#4FC3F7] text-[#F5F9FF] font-semibold rounded-lg transform hover:scale-105 transition-all duration-300">
+                    View Services
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <div id="footer-container"></div>
+    
+    <!-- Scripts -->
+    <script src="js/components.js"></script>
+    <script>
+        // Inject navbar and footer
+        document.getElementById('navbar-container').innerHTML = createNavbar('/projects');
+        document.getElementById('footer-container').innerHTML = createFooter();
+        // Initialize navbar components after injection
+        if (window.initNavbarComponents) {
+            window.initNavbarComponents();
+        }
+        
+        // Filter functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const filter = button.getAttribute('data-filter');
+                
+                // Update active button
+                filterButtons.forEach(btn => {
+                    btn.classList.remove('active', 'bg-gradient-to-r', 'from-[#1E88E5]', 'to-[#4FC3F7]', 'text-white');
+                    btn.classList.add('bg-[#0A1A2F]/60', 'backdrop-blur-sm', 'border', 'border-[#1E88E5]/30', 'text-[#B0BEC5]');
+                });
+                
+                button.classList.add('active', 'bg-gradient-to-r', 'from-[#1E88E5]', 'to-[#4FC3F7]', 'text-white');
+                button.classList.remove('bg-[#0A1A2F]/60', 'backdrop-blur-sm', 'border', 'border-[#1E88E5]/30', 'text-[#B0BEC5]');
+                
+                // Filter cards
+                projectCards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'block';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, 10);
+                    } else {
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+    </script>
+    <script src="js/heroBackground.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

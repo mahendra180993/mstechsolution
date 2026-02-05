@@ -18,7 +18,13 @@
     <meta property="og:title" content="Corporate IT & Software Services Company in Hyderabad | MSTech" />
     <meta property="og:description" content="MSTech Solution is a corporate IT and software services company in Hyderabad offering enterprise software, web development, and digital transformation with 24/7 support." />
     <meta property="og:image" content="https://mstechsolution.in/imgs/full-logo.png" />
+    <meta property="og:image:secure_url" content="https://mstechsolution.in/imgs/full-logo.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="MSTech Solution - Corporate IT & Software Services Company" />
     <meta property="og:site_name" content="MS Tech Solution" />
+    <meta property="og:locale" content="en_US" />
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -26,6 +32,7 @@
     <meta name="twitter:title" content="Corporate IT & Software Services Company in Hyderabad | MSTech" />
     <meta name="twitter:description" content="MSTech Solution is a corporate IT and software services company in Hyderabad offering enterprise software, web development, and digital transformation with 24/7 support." />
     <meta name="twitter:image" content="https://mstechsolution.in/imgs/full-logo.png" />
+    <meta name="twitter:image:alt" content="MSTech Solution - Corporate IT & Software Services Company" />
     
     <!-- Google Search Console Verification -->
     <meta name="google-site-verification" content="Lakaq8QNBlRoCZK6LVxX6rW7UUnT8jHRGUulFVt4PY4" />
@@ -127,9 +134,10 @@
     <div id="navbar-container"></div>
     
     <!-- Hero Section -->
-    <section id="hero" class="relative w-full min-h-screen flex items-center justify-center bg-gradient-to-br from-[#0A1A2F] via-[#0F1F3A] to-[#0A1A2F] pt-20 md:pt-24 pb-16 md:pb-20">
-        <canvas id="hero-canvas" class="absolute inset-0 w-full h-full z-0"></canvas>
-        <div class="absolute inset-0 bg-gradient-to-b from-[#0A1A2F]/60 via-transparent to-[#0A1A2F]/60 z-[1] pointer-events-none"></div>
+    <section id="hero" class="relative w-full min-h-screen flex items-center justify-center bg-gradient-to-br from-[#0A1A2F] via-[#0F1F3A] to-[#0A1A2F] pt-20 md:pt-24 pb-16 md:pb-20 overflow-hidden">
+        <!-- Video Background -->
+        <video id="hero-video" class="absolute inset-0 w-full h-full object-cover z-0 opacity-85" autoplay muted loop playsinline></video>
+        <div class="absolute inset-0 bg-gradient-to-b from-[#0A1A2F]/75 via-[#0A1A2F]/65 to-[#0A1A2F]/75 z-[1] pointer-events-none"></div>
         <div class="relative z-[2] flex flex-col items-center justify-center min-h-[calc(100vh-5rem)] text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto py-8 md:py-12">
             <div class="mb-4 sm:mb-6 fade-in">
                 <span class="inline-block px-3 py-1.5 sm:px-4 sm:py-2 bg-[#1E88E5]/20 border border-[#1E88E5]/50 rounded-full text-[#4FC3F7] text-xs sm:text-sm font-medium backdrop-blur-sm">
@@ -333,7 +341,65 @@
             window.initNavbarComponents();
         }
     </script>
-    <script src="js/heroBackground.js"></script>
+    <script>
+        // Responsive video background handler
+        function setupHeroVideo() {
+            const video = document.getElementById('hero-video');
+            if (!video) return;
+            
+            const desktopSrc = 'https://res.cloudinary.com/dc1g3ataq/video/upload/v1770271568/desktop_v_zqulq2.mp4';
+            const mobileSrc = 'https://res.cloudinary.com/dc1g3ataq/video/upload/v1770271568/mobile_v_ocljjj.mp4';
+            let currentSource = null;
+            
+            function updateVideoSource() {
+                const isMobile = window.innerWidth < 768;
+                const targetSrc = isMobile ? mobileSrc : desktopSrc;
+                
+                // Only update if source changed
+                if (currentSource !== targetSrc) {
+                    currentSource = targetSrc;
+                    video.src = targetSrc;
+                    video.load();
+                    
+                    // Try to play video
+                    const playPromise = video.play();
+                    if (playPromise !== undefined) {
+                        playPromise.catch(error => {
+                            // Autoplay may be blocked by browser policy
+                            console.log('Video autoplay prevented:', error);
+                        });
+                    }
+                }
+            }
+            
+            // Set initial video source
+            updateVideoSource();
+            
+            // Update on resize (with debounce to avoid excessive updates)
+            let resizeTimeout;
+            window.addEventListener('resize', () => {
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(updateVideoSource, 250);
+            });
+            
+            // Ensure video plays when loaded
+            video.addEventListener('loadeddata', () => {
+                const playPromise = video.play();
+                if (playPromise !== undefined) {
+                    playPromise.catch(error => {
+                        console.log('Video play prevented:', error);
+                    });
+                }
+            });
+        }
+        
+        // Initialize video when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', setupHeroVideo);
+        } else {
+            setupHeroVideo();
+        }
+    </script>
     <script src="js/counters.js"></script>
     <script src="js/main.js"></script>
     <script>

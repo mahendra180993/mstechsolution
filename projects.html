@@ -86,6 +86,7 @@
     
     <style>
         /* Project card hover glow effect */
+        /* Project card hover glow effect */
         .project-card {
             transition: all 0.3s ease;
         }
@@ -137,6 +138,7 @@
     
     <!-- Hero Section -->
     <section class="relative w-full min-h-screen flex items-center justify-center bg-[#0A1A2F] text-white pt-20 md:pt-24 pb-16 md:pb-20 border-b border-[#1E88E5]/30 overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=1920&q=80" alt="Project portfolio background" class="absolute inset-0 w-full h-full object-cover opacity-35">
         <canvas id="hero-canvas" class="absolute inset-0 w-full h-full"></canvas>
         <div class="absolute inset-0 bg-gradient-to-b from-[#0A1A2F]/80 via-transparent to-[#0A1A2F]/80"></div>
         <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in">
@@ -156,14 +158,17 @@
                 <button class="filter-btn active px-6 py-2 bg-gradient-to-r from-[#1E88E5] to-[#4FC3F7] text-white font-semibold rounded-lg hover:from-[#1976D2] hover:to-[#29B6F6] transition-all duration-300" data-filter="all">
                     All Projects
                 </button>
-                <button class="filter-btn px-6 py-2 bg-[#0A1A2F]/60 backdrop-blur-sm border border-[#1E88E5]/30 text-[#B0BEC5] font-semibold rounded-lg hover:bg-[#0A1A2F]/80 hover:border-[#4FC3F7] hover:text-[#4FC3F7] transition-all duration-300" data-filter="interior">
-                    Interior Design
-                </button>
-                <button class="filter-btn px-6 py-2 bg-[#0A1A2F]/60 backdrop-blur-sm border border-[#1E88E5]/30 text-[#B0BEC5] font-semibold rounded-lg hover:bg-[#0A1A2F]/80 hover:border-[#4FC3F7] hover:text-[#4FC3F7] transition-all duration-300" data-filter="tax">
-                    Tax Services
+                <button class="filter-btn px-6 py-2 bg-[#0A1A2F]/60 backdrop-blur-sm border border-[#1E88E5]/30 text-[#B0BEC5] font-semibold rounded-lg hover:bg-[#0A1A2F]/80 hover:border-[#4FC3F7] hover:text-[#4FC3F7] transition-all duration-300" data-filter="school">
+                    Schools Websites
                 </button>
                 <button class="filter-btn px-6 py-2 bg-[#0A1A2F]/60 backdrop-blur-sm border border-[#1E88E5]/30 text-[#B0BEC5] font-semibold rounded-lg hover:bg-[#0A1A2F]/80 hover:border-[#4FC3F7] hover:text-[#4FC3F7] transition-all duration-300" data-filter="printing">
                     Printing & ID Cards
+                </button>
+                <button class="filter-btn px-6 py-2 bg-[#0A1A2F]/60 backdrop-blur-sm border border-[#1E88E5]/30 text-[#B0BEC5] font-semibold rounded-lg hover:bg-[#0A1A2F]/80 hover:border-[#4FC3F7] hover:text-[#4FC3F7] transition-all duration-300" data-filter="interior">
+                    Interior Design Websites
+                </button>
+                <button class="filter-btn px-6 py-2 bg-[#0A1A2F]/60 backdrop-blur-sm border border-[#1E88E5]/30 text-[#B0BEC5] font-semibold rounded-lg hover:bg-[#0A1A2F]/80 hover:border-[#4FC3F7] hover:text-[#4FC3F7] transition-all duration-300" data-filter="tax">
+                    Tax Services
                 </button>
             </div>
         </div>
@@ -173,8 +178,76 @@
     <section class="py-20 md:py-32 bg-[#0A1A2F]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+
+                <!-- Project 1: Montridge School -->
+                <div class="project-card bg-[#0A1A2F]/60 backdrop-blur-sm border border-[#1E88E5]/30 rounded-2xl overflow-hidden cursor-pointer fade-in" data-category="school" onclick="window.open('https://montridge.in/', '_blank', 'noopener,noreferrer')">
+                    <div class="aspect-video bg-[#0A1A2F] relative overflow-hidden">
+                        <img src="https://montridge.in/wp-content/uploads/2025/02/1-2-scaled.jpg" alt="Montridge School Website"
+                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="hidden absolute inset-0 bg-gradient-to-br from-[#1B2A2E] via-[#0F1A1C] to-[#1B2A2E] items-center justify-center">
+                            <div class="text-center">
+                                <svg class="w-16 h-16 text-[#4FC3F7] mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422A12.083 12.083 0 0112 20.055a12.083 12.083 0 01-6.16-9.477L12 14z" />
+                                </svg>
+                                <span class="text-[#B0BEC5] text-sm">Montridge School</span>
+                            </div>
+                        </div>
+                        <div class="project-overlay absolute inset-0 bg-[#0A1A2F]/90 flex items-center justify-center">
+                            <span class="bg-gradient-to-r from-[#1E88E5] to-[#4FC3F7] bg-clip-text text-transparent text-sm font-semibold">CBSE School Website</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="px-3 py-1 bg-[#0A1A2F] border border-[#1E88E5]/30 bg-gradient-to-r from-[#1E88E5] to-[#4FC3F7] bg-clip-text text-transparent rounded-full text-xs font-medium">School</span>
+                            <span class="px-3 py-1 bg-[#0A1A2F] border border-[#1E88E5]/30 text-[#B0BEC5] rounded-full text-xs font-medium">Website</span>
+                        </div>
+                        <h3 class="text-2xl font-heading font-bold mb-3 text-[#F5F9FF]">Montridge School</h3>
+                        <p class="text-[#B0BEC5] mb-4 leading-relaxed">
+                            School website focused on admissions, academics, infrastructure highlights, and parent-friendly communication.
+                        </p>
+                        <a href="https://montridge.in/" target="_blank" rel="noopener noreferrer" class="btn-view-project inline-block px-6 py-3 bg-gradient-to-r from-[#1E88E5] to-[#4FC3F7] text-white font-semibold rounded-lg hover:from-[#1976D2] hover:to-[#29B6F6] transition-all duration-300">
+                            View Live Project →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2: Vivekananda Global High School -->
+                <div class="project-card bg-[#0A1A2F]/60 backdrop-blur-sm border border-[#1E88E5]/30 rounded-2xl overflow-hidden cursor-pointer fade-in" data-category="school" onclick="window.open('https://www.vivekanandacbseschools.com/', '_blank', 'noopener,noreferrer')">
+                    <div class="aspect-video bg-[#0A1A2F] relative overflow-hidden">
+                        <img src="https://www.vivekanandacbseschools.com/images/bg_2.jpeg" alt="Vivekananda Global High School Website"
+                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="hidden absolute inset-0 bg-gradient-to-br from-[#1B2A2E] via-[#0F1A1C] to-[#1B2A2E] items-center justify-center">
+                            <div class="text-center">
+                                <svg class="w-16 h-16 text-[#4FC3F7] mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422A12.083 12.083 0 0112 20.055a12.083 12.083 0 01-6.16-9.477L12 14z" />
+                                </svg>
+                                <span class="text-[#B0BEC5] text-sm">Vivekananda Global High School</span>
+                            </div>
+                        </div>
+                        <div class="project-overlay absolute inset-0 bg-[#0A1A2F]/90 flex items-center justify-center">
+                            <span class="bg-gradient-to-r from-[#1E88E5] to-[#4FC3F7] bg-clip-text text-transparent text-sm font-semibold">Educational Platform</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="px-3 py-1 bg-[#0A1A2F] border border-[#1E88E5]/30 bg-gradient-to-r from-[#1E88E5] to-[#4FC3F7] bg-clip-text text-transparent rounded-full text-xs font-medium">School</span>
+                            <span class="px-3 py-1 bg-[#0A1A2F] border border-[#1E88E5]/30 text-[#B0BEC5] rounded-full text-xs font-medium">CBSE</span>
+                        </div>
+                        <h3 class="text-2xl font-heading font-bold mb-3 text-[#F5F9FF]">Vivekananda Global High School</h3>
+                        <p class="text-[#B0BEC5] mb-4 leading-relaxed">
+                            CBSE school website featuring curriculum details, admissions, infrastructure information, and contact options.
+                        </p>
+                        <a href="https://www.vivekanandacbseschools.com/" target="_blank" rel="noopener noreferrer" class="btn-view-project inline-block px-6 py-3 bg-gradient-to-r from-[#1E88E5] to-[#4FC3F7] text-white font-semibold rounded-lg hover:from-[#1976D2] hover:to-[#29B6F6] transition-all duration-300">
+                            View Live Project →
+                        </a>
+                    </div>
+                </div>
                 
-                <!-- Project 1: Trika Interior Design -->
+                <!-- Project 3: Trika Interior Design -->
                 <div class="project-card bg-[#0A1A2F]/60 backdrop-blur-sm border border-[#1E88E5]/30 rounded-2xl overflow-hidden cursor-pointer fade-in" data-category="interior" onclick="window.open('https://trika.co.in/', '_blank', 'noopener,noreferrer')">
                     <div class="aspect-video bg-[#0A1A2F] relative overflow-hidden">
                         <img src="https://res.cloudinary.com/dn7vhrh6r/image/upload/v1766414882/DSC07016-1536x1024_aw2ixf.jpg" alt="Trika Interior Design Website" 
@@ -386,24 +459,44 @@
     </section>
     
     <!-- Stats Section -->
-    <section class="py-20 md:py-32 bg-[#0A1A2F]/60 backdrop-blur-sm border-t border-[#1E88E5]/30">
+    <section class="py-20 md:py-32 bg-gradient-to-b from-[#0A1A2F] to-[#0F1F3A] border-t border-[#1E88E5]/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                <div class="fade-in">
-                    <div class="bg-gradient-to-r from-[#1E88E5] to-[#4FC3F7] bg-clip-text text-transparent">40+</div>
-                    <div class="text-[#B0BEC5] font-medium">Projects Done</div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                <div class="fade-in group text-center">
+                    <div class="relative h-full">
+                        <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-[#1E88E5]/20 to-[#4FC3F7]/20 blur-xl opacity-40 group-hover:opacity-70 transition-opacity duration-300"></div>
+                        <div class="relative bg-[#0A1A2F]/60 backdrop-blur-sm border border-[#1E88E5]/30 rounded-2xl px-6 py-8 md:px-8 md:py-10 h-full transition-all duration-300 group-hover:border-[#4FC3F7]/60 group-hover:-translate-y-1">
+                            <div class="text-4xl md:text-5xl font-heading font-bold bg-gradient-to-r from-[#1E88E5] to-[#4FC3F7] bg-clip-text text-transparent mb-3">40+</div>
+                            <div class="text-[#B0BEC5] text-sm md:text-base font-medium tracking-wide">Projects Done</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="fade-in">
-                    <div class="bg-gradient-to-r from-[#1E88E5] to-[#4FC3F7] bg-clip-text text-transparent">20+</div>
-                    <div class="text-[#B0BEC5] font-medium">Happy Clients</div>
+                <div class="fade-in group text-center">
+                    <div class="relative h-full">
+                        <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-[#1E88E5]/20 to-[#4FC3F7]/20 blur-xl opacity-40 group-hover:opacity-70 transition-opacity duration-300"></div>
+                        <div class="relative bg-[#0A1A2F]/60 backdrop-blur-sm border border-[#1E88E5]/30 rounded-2xl px-6 py-8 md:px-8 md:py-10 h-full transition-all duration-300 group-hover:border-[#4FC3F7]/60 group-hover:-translate-y-1">
+                            <div class="text-4xl md:text-5xl font-heading font-bold bg-gradient-to-r from-[#1E88E5] to-[#4FC3F7] bg-clip-text text-transparent mb-3">20+</div>
+                            <div class="text-[#B0BEC5] text-sm md:text-base font-medium tracking-wide">Happy Clients</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="fade-in">
-                    <div class="bg-gradient-to-r from-[#1E88E5] to-[#4FC3F7] bg-clip-text text-transparent">100%</div>
-                    <div class="text-[#B0BEC5] font-medium">Client Satisfaction</div>
+                <div class="fade-in group text-center">
+                    <div class="relative h-full">
+                        <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-[#1E88E5]/20 to-[#4FC3F7]/20 blur-xl opacity-40 group-hover:opacity-70 transition-opacity duration-300"></div>
+                        <div class="relative bg-[#0A1A2F]/60 backdrop-blur-sm border border-[#1E88E5]/30 rounded-2xl px-6 py-8 md:px-8 md:py-10 h-full transition-all duration-300 group-hover:border-[#4FC3F7]/60 group-hover:-translate-y-1">
+                            <div class="text-4xl md:text-5xl font-heading font-bold bg-gradient-to-r from-[#1E88E5] to-[#4FC3F7] bg-clip-text text-transparent mb-3">100%</div>
+                            <div class="text-[#B0BEC5] text-sm md:text-base font-medium tracking-wide">Client Satisfaction</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="fade-in">
-                    <div class="bg-gradient-to-r from-[#1E88E5] to-[#4FC3F7] bg-clip-text text-transparent">24/7</div>
-                    <div class="text-[#B0BEC5] font-medium">Support Available</div>
+                <div class="fade-in group text-center">
+                    <div class="relative h-full">
+                        <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-[#1E88E5]/20 to-[#4FC3F7]/20 blur-xl opacity-40 group-hover:opacity-70 transition-opacity duration-300"></div>
+                        <div class="relative bg-[#0A1A2F]/60 backdrop-blur-sm border border-[#1E88E5]/30 rounded-2xl px-6 py-8 md:px-8 md:py-10 h-full transition-all duration-300 group-hover:border-[#4FC3F7]/60 group-hover:-translate-y-1">
+                            <div class="text-4xl md:text-5xl font-heading font-bold bg-gradient-to-r from-[#1E88E5] to-[#4FC3F7] bg-clip-text text-transparent mb-3">24/7</div>
+                            <div class="text-[#B0BEC5] text-sm md:text-base font-medium tracking-wide">Support Available</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

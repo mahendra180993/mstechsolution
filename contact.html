@@ -285,10 +285,14 @@
     
     <!-- Chatbot Scripts -->
     <script>
-      window.CHATBOT_CONFIG = {
-        apiBaseUrl: 'https://your-agent-5ti9.onrender.com/api'
-      };
-    </script>
-    <script src="https://your-agent-5ti9.onrender.com/chatbot.js"></script>
+        window.CHATBOT_CONFIG = {
+          apiBaseUrl: 'https://your-agent-5ti9.onrender.com/api',
+          title: 'Your Helper',                        // optional: header title
+          logoUrl: 'https://res.cloudinary.com/dnrvkjq10/image/upload/v1773047575/favicon_tl70gc.png',      // optional: client logo URL
+          position: 'bottom-right',                     // 'bottom-right' or 'bottom-left'
+          primaryColor: '#0f0d24'                       // optional: main chat color
+        };
+      </script>
+      <script src="https://your-agent-5ti9.onrender.com/chatbot.js"></script>
 </body>
 </html>

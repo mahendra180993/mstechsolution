@@ -200,6 +200,19 @@ h1, h2, h3, h4, h5, h6 {
         z-index: 9999 !important;
     }
     
+    /* Force full-screen mobile menu behavior */
+    .mobile-menu-overlay {
+        transform: none;
+        opacity: 0;
+        pointer-events: none;
+    }
+    
+    .mobile-menu-overlay.active {
+        transform: none;
+        opacity: 1;
+        pointer-events: auto;
+    }
+    
     /* Better spacing for mobile links */
     .nav-link {
         padding: 10px 0;

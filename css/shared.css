@@ -506,6 +506,17 @@ section:first-of-type {
     }
 }
 
+/* Chatbot widget mobile overrides (ensure clickable on small screens) */
+@media (max-width: 767px) {
+    [class*="chatbot"],
+    [id*="chatbot"],
+    [data-chatbot],
+    [data-widget*="chatbot"] {
+        z-index: 100000 !important;
+        pointer-events: auto !important;
+    }
+}
+
 /* FAQ Styles */
 .faq-item {
     transition: all 0.3s ease;

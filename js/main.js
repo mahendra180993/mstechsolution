@@ -151,10 +151,8 @@ function checkInitialVisibility() {
         const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
         
         if (isVisible) {
-            // Add small delay for initial load
-            setTimeout(() => {
-                element.classList.add('visible');
-            }, 100);
+            element.classList.add('visible');
+            element.style.opacity = '1';
         }
     });
 }
@@ -270,16 +268,18 @@ function enhanceServiceCards() {
 function initParallax() {
     const hero = document.getElementById('hero');
     if (!hero) return;
-    
+
+    const heroContent = hero.querySelector('.gsap-hero');
+    if (!heroContent) return;
+
     window.addEventListener('scroll', () => {
         const scrolled = window.pageYOffset;
-        const heroContent = hero.querySelector('.relative.z-10');
-        
-        if (heroContent && scrolled < hero.offsetHeight) {
-            heroContent.style.transform = `translateY(${scrolled * 0.5}px)`;
-            heroContent.style.opacity = 1 - (scrolled / hero.offsetHeight) * 0.5;
+        if (scrolled < hero.offsetHeight) {
+            heroContent.style.transform = `translateY(${scrolled * 0.25}px)`;
+        } else {
+            heroContent.style.transform = '';
         }
-    });
+    }, { passive: true });
 }
 
 /**

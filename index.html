@@ -6,8 +6,8 @@
     
     <!-- SEO Meta Tags -->
     <title>Corporate IT & Software Services Company in Hyderabad | MSTech</title>
-    <meta name="description" content="MSTech Solution is a corporate IT and software services company in Hyderabad offering enterprise software, web development, and digital transformation with 24/7 support.">
-    <meta name="keywords" content="corporate IT services company, software development company in Hyderabad, enterprise software solutions provider, web development company in Kukatpally, digital transformation services India, custom software development company, IT Consulting Services Hyderabad, Corporate software solutions provider">
+    <meta name="description" content="MSTech Solution is a corporate IT, software, and printing services company in Hyderabad offering enterprise software, web development, digital transformation, and Corporate & School Printing Services.">
+    <meta name="keywords" content="corporate IT services company, software development company in Hyderabad, enterprise software solutions provider, web development company in Kukatpally, digital transformation services India, custom software development company, IT Consulting Services Hyderabad, Corporate software solutions provider, Corporate & School Printing Services, corporate printing services, school printing services">
     
     <!-- Canonical Tag -->
     <link rel="canonical" href="https://mstechsolution.in/" />
@@ -16,7 +16,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://mstechsolution.in/" />
     <meta property="og:title" content="Corporate IT & Software Services Company in Hyderabad | MSTech" />
-    <meta property="og:description" content="MSTech Solution is a corporate IT and software services company in Hyderabad offering enterprise software, web development, and digital transformation with 24/7 support." />
+    <meta property="og:description" content="MSTech Solution is a corporate IT, software, and printing services company in Hyderabad offering enterprise software, web development, digital transformation, and Corporate & School Printing Services." />
     <meta property="og:image" content="https://mstechsolution.in/imgs/full-logo.png" />
     <meta property="og:site_name" content="MS Tech Solution" />
     
@@ -24,7 +24,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://mstechsolution.in/" />
     <meta name="twitter:title" content="Corporate IT & Software Services Company in Hyderabad | MSTech" />
-    <meta name="twitter:description" content="MSTech Solution is a corporate IT and software services company in Hyderabad offering enterprise software, web development, and digital transformation with 24/7 support." />
+    <meta name="twitter:description" content="MSTech Solution is a corporate IT, software, and printing services company in Hyderabad offering enterprise software, web development, digital transformation, and Corporate & School Printing Services." />
     <meta name="twitter:image" content="https://mstechsolution.in/imgs/full-logo.png" />
     
     <!-- Google Search Console Verification -->
@@ -51,6 +51,8 @@
     
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -162,6 +164,10 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     
+    <div id="scroll-progress" class="scroll-progress"></div>
+    <div id="cursor-glow" class="cursor-glow"></div>
+    <div id="cursor-dot" class="cursor-dot"></div>
+
     <!-- LOADER -->
     <div id="loader">
         <div id="loader-spinner" class="loader-spinner"></div>
@@ -175,6 +181,9 @@
     
     <!-- Hero Section -->
     <section id="hero" class="relative w-full min-h-screen flex items-center justify-center bg-gradient-to-br from-[#0A1A2F] via-[#0F1F3A] to-[#0A1A2F] pt-20 md:pt-24 pb-16 md:pb-20">
+        <div class="blob blob-a float-el" data-parallax-speed="0.08"></div>
+        <div class="blob blob-b float-el" data-parallax-speed="0.14"></div>
+        <canvas id="particles-canvas" class="absolute inset-0 w-full h-full z-0 pointer-events-none"></canvas>
         <video autoplay muted loop playsinline preload="metadata" class="absolute inset-0 w-full h-full object-cover z-0 opacity-[0.45] hidden md:block">
             <source src="https://res.cloudinary.com/dc1g3ataq/video/upload/v1770271568/desktop_v_zqulq2.mp4" type="video/mp4">
         </video>
@@ -183,25 +192,28 @@
         </video>
         <canvas id="hero-canvas" class="hidden"></canvas>
         <div class="absolute inset-0 bg-gradient-to-b from-[#0A1A2F]/60 via-transparent to-[#0A1A2F]/60 z-[1] pointer-events-none"></div>
-        <div class="relative z-[2] flex flex-col items-center justify-center min-h-[calc(100vh-5rem)] text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto py-8 md:py-12">
-            <div class="mb-4 sm:mb-6 fade-in">
+        <div class="relative z-[2] flex flex-col items-center justify-center min-h-[calc(100vh-5rem)] text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto py-8 md:py-12 gsap-hero w-full">
+            <div class="hero-animate mb-4 sm:mb-6 w-full flex justify-center">
                 <span class="inline-block px-3 py-1.5 sm:px-4 sm:py-2 bg-[#1E88E5]/20 border border-[#1E88E5]/50 rounded-full text-[#4FC3F7] text-xs sm:text-sm font-medium backdrop-blur-sm">
                     Corporate IT & Software Services
                 </span>
             </div>
-            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 text-[#F5F9FF] leading-relaxed md:leading-relaxed pb-2 fade-in" style="line-height: 1.3;">
-                Transform Your Business with
-                <span class="block mt-2 sm:mt-3 bg-gradient-to-r from-[#1E88E5] to-[#4FC3F7] bg-clip-text text-transparent pb-1">Cutting-Edge Technology</span>
+            <h1 class="hero-animate hero-headline text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 text-[#F5F9FF] w-full max-w-4xl mx-auto">
+                <span class="hero-headline-line block">Transform Your Business with</span>
+                <span class="hero-headline-accent block mt-2 sm:mt-3 bg-gradient-to-r from-[#1E88E5] to-[#4FC3F7] bg-clip-text text-transparent">Cutting-Edge Technology</span>
             </h1>
-            <p class="text-base sm:text-lg md:text-xl lg:text-2xl text-[#B0BEC5] mb-8 sm:mb-10 max-w-3xl fade-in font-light leading-relaxed">
-                Enterprise-grade software solutions, web development, and digital transformation services that scale with your business
+            <p id="hero-typing" class="hero-animate hero-typing text-base sm:text-lg md:text-xl lg:text-2xl text-[#B0BEC5] mb-8 sm:mb-10 max-w-3xl mx-auto font-light leading-relaxed w-full"
+               data-text="Enterprise-grade software solutions, web development, and digital transformation services that scale with your business">
+                <span id="hero-typing-text" class="hero-typing-text"></span><span class="typing-cursor" aria-hidden="true"></span>
             </p>
-            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 fade-in">
-                <a href="/contact" class="group px-6 py-3 sm:px-8 sm:py-4 bg-gradient-to-r from-[#1E88E5] to-[#4FC3F7] hover:from-[#1976D2] hover:to-[#29B6F6] text-white text-sm sm:text-base font-semibold rounded-lg shadow-lg hover:shadow-2xl hover:shadow-[#1E88E5]/50 transform hover:scale-105 transition-all duration-300 relative overflow-hidden">
+            <div class="hero-animate flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 justify-center items-center w-full">
+                <a href="/contact" class="group px-6 py-3 sm:px-8 sm:py-4 bg-gradient-to-r from-[#1E88E5] to-[#4FC3F7] hover:from-[#1976D2] hover:to-[#29B6F6] text-white text-sm sm:text-base font-semibold rounded-lg shadow-lg hover:shadow-2xl hover:shadow-[#1E88E5]/50 transform hover:scale-105 transition-all duration-300 relative overflow-hidden btn-lift tilt-card">
+                    <span class="orbit-ring spin-slow"></span>
+                    <span class="orbit-ring spin-reverse"></span>
                     <span class="relative z-10">Get Started Today</span>
                     <div class="absolute inset-0 bg-gradient-to-r from-[#4FC3F7] to-[#1E88E5] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </a>
-                <a href="/services" class="px-6 py-3 sm:px-8 sm:py-4 bg-[#0A1A2F]/60 backdrop-blur-md hover:bg-[#0A1A2F]/80 text-[#F5F9FF] text-sm sm:text-base font-semibold rounded-lg border-2 border-[#1E88E5]/50 hover:border-[#4FC3F7] hover:shadow-lg hover:shadow-[#1E88E5]/30 transform hover:scale-105 transition-all duration-300">
+                <a href="/services" class="px-6 py-3 sm:px-8 sm:py-4 bg-[#0A1A2F]/60 backdrop-blur-md hover:bg-[#0A1A2F]/80 text-[#F5F9FF] text-sm sm:text-base font-semibold rounded-lg border-2 border-[#1E88E5]/50 hover:border-[#4FC3F7] hover:shadow-lg hover:shadow-[#1E88E5]/30 transform hover:scale-105 transition-all duration-300 btn-lift tilt-card">
                     Explore Services
                 </a>
             </div>
@@ -218,7 +230,7 @@
     <section id="stats" class="py-20 md:py-28 bg-gradient-to-b from-[#0A1A2F] to-[#0F1F3A] border-t border-[#1E88E5]/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-                <div class="text-center fade-in group">
+                <div class="text-center fade-in group stat-card" data-aos="zoom-in">
                     <div class="relative inline-block mb-4">
                         <div class="absolute inset-0 bg-gradient-to-r from-[#1E88E5] to-[#4FC3F7] rounded-lg blur-xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
                         <div class="relative bg-[#0A1A2F]/60 backdrop-blur-sm border border-[#1E88E5]/30 rounded-lg p-6 min-w-[200px]">
@@ -230,7 +242,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="text-center fade-in group">
+                <div class="text-center fade-in group stat-card" data-aos="zoom-in" data-aos-delay="80">
                     <div class="relative inline-block mb-4">
                         <div class="absolute inset-0 bg-gradient-to-r from-[#1E88E5] to-[#4FC3F7] rounded-lg blur-xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
                         <div class="relative bg-[#0A1A2F]/60 backdrop-blur-sm border border-[#1E88E5]/30 rounded-lg p-6 min-w-[200px]">
@@ -242,7 +254,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="text-center fade-in group">
+                <div class="text-center fade-in group stat-card" data-aos="zoom-in" data-aos-delay="160">
                     <div class="relative inline-block mb-4">
                         <div class="absolute inset-0 bg-gradient-to-r from-[#1E88E5] to-[#4FC3F7] rounded-lg blur-xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
                         <div class="relative bg-[#0A1A2F]/60 backdrop-blur-sm border border-[#1E88E5]/30 rounded-lg p-6 min-w-[200px]">
@@ -259,7 +271,7 @@
     <section id="about-preview" class="py-20 md:py-32 bg-gradient-to-b from-[#0F1F3A] to-[#0A1A2F] border-t border-[#1E88E5]/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="fade-in">
+                <div class="fade-in" data-aos="fade-right">
                     <h2 class="text-4xl md:text-5xl font-heading font-bold mb-6 bg-gradient-to-r from-[#1E88E5] to-[#4FC3F7] bg-clip-text text-transparent">About MS Tech Solution</h2>
                     <p class="text-lg text-[#B0BEC5] mb-4 leading-relaxed font-body">
                         We are a leading corporate IT and software services company specializing in enterprise-grade solutions, web development, and digital transformation. Based in Kukatpally, Hyderabad, we combine cutting-edge technology with business expertise to drive innovation.
@@ -272,7 +284,7 @@
                     </a>
                 </div>
                 
-                <div class="grid grid-cols-2 gap-4 fade-in">
+                <div class="grid grid-cols-2 gap-4 fade-in" data-aos="fade-up">
                     <div class="bg-[#0A1A2F]/60 backdrop-blur-sm border border-[#1E88E5]/30 rounded-xl p-6 text-center hover:border-[#4FC3F7] hover:shadow-lg hover:shadow-[#1E88E5]/20 transition-all duration-300">
                         <div class="text-4xl font-heading font-bold bg-gradient-to-r from-[#1E88E5] to-[#4FC3F7] bg-clip-text text-transparent mb-2">20+</div>
                         <div class="text-[#B0BEC5] font-medium">Clients</div>
@@ -297,16 +309,18 @@
     <!-- Services Preview Section -->
     <section id="services-preview" class="py-20 md:py-32 bg-gradient-to-b from-[#0A1A2F] to-[#0F1F3A] border-t border-[#1E88E5]/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 fade-in">
+            <div class="text-center mb-16 fade-in" data-aos="fade-up">
                 <h2 class="text-4xl md:text-5xl font-heading font-bold mb-4 bg-gradient-to-r from-[#1E88E5] to-[#4FC3F7] bg-clip-text text-transparent">Our Services</h2>
                 <p class="text-lg text-[#B0BEC5] max-w-2xl mx-auto font-body">
                     Enterprise-grade solutions designed to accelerate your business growth
                 </p>
             </div>
             
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            <div id="home-services-swiper" class="swiper home-services-swiper pb-10">
+                <div class="swiper-wrapper">
                 <!-- Service Card 1 -->
-                <div class="group bg-[#0A1A2F]/60 backdrop-blur-sm border border-[#1E88E5]/30 rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-2xl hover:shadow-[#1E88E5]/30 hover:border-[#4FC3F7] transform hover:-translate-y-2 transition-all duration-300 fade-in">
+                <div class="swiper-slide">
+                <div class="group bg-[#0A1A2F]/60 backdrop-blur-sm border border-[#1E88E5]/30 rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-2xl hover:shadow-[#1E88E5]/30 hover:border-[#4FC3F7] transform hover:-translate-y-2 transition-all duration-300 fade-in service-card tilt-card h-full" data-aos="fade-up">
                     <div class="relative w-14 h-14 bg-gradient-to-br from-[#1E88E5]/20 to-[#4FC3F7]/20 border border-[#1E88E5]/50 rounded-xl flex items-center justify-center mb-4 group-hover:border-[#4FC3F7] group-hover:bg-gradient-to-br group-hover:from-[#1E88E5]/30 group-hover:to-[#4FC3F7]/30 transition-all">
                         <svg class="w-7 h-7 text-[#4FC3F7] group-hover:text-[#1E88E5] transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
@@ -317,9 +331,11 @@
                         Modern, responsive website designs that captivate your audience and drive conversions with cutting-edge UI/UX.
                     </p>
                 </div>
+                </div>
                 
                 <!-- Service Card 2 -->
-                <div class="group bg-[#0A1A2F]/60 backdrop-blur-sm border border-[#1E88E5]/30 rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-2xl hover:shadow-[#1E88E5]/30 hover:border-[#4FC3F7] transform hover:-translate-y-2 transition-all duration-300 fade-in">
+                <div class="swiper-slide">
+                <div class="group bg-[#0A1A2F]/60 backdrop-blur-sm border border-[#1E88E5]/30 rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-2xl hover:shadow-[#1E88E5]/30 hover:border-[#4FC3F7] transform hover:-translate-y-2 transition-all duration-300 fade-in service-card tilt-card h-full" data-aos="fade-up" data-aos-delay="80">
                     <div class="relative w-14 h-14 bg-gradient-to-br from-[#1E88E5]/20 to-[#4FC3F7]/20 border border-[#1E88E5]/50 rounded-xl flex items-center justify-center mb-4 group-hover:border-[#4FC3F7] group-hover:bg-gradient-to-br group-hover:from-[#1E88E5]/30 group-hover:to-[#4FC3F7]/30 transition-all">
                         <svg class="w-7 h-7 text-[#4FC3F7] group-hover:text-[#1E88E5] transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
@@ -330,9 +346,11 @@
                         Scalable, high-performance web applications built with modern frameworks and enterprise best practices.
                     </p>
                 </div>
+                </div>
                 
                 <!-- Service Card 3 -->
-                <div class="group bg-[#0A1A2F]/60 backdrop-blur-sm border border-[#1E88E5]/30 rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-2xl hover:shadow-[#1E88E5]/30 hover:border-[#4FC3F7] transform hover:-translate-y-2 transition-all duration-300 fade-in">
+                <div class="swiper-slide">
+                <div class="group bg-[#0A1A2F]/60 backdrop-blur-sm border border-[#1E88E5]/30 rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-2xl hover:shadow-[#1E88E5]/30 hover:border-[#4FC3F7] transform hover:-translate-y-2 transition-all duration-300 fade-in service-card tilt-card h-full" data-aos="fade-up" data-aos-delay="160">
                     <div class="relative w-14 h-14 bg-gradient-to-br from-[#1E88E5]/20 to-[#4FC3F7]/20 border border-[#1E88E5]/50 rounded-xl flex items-center justify-center mb-4 group-hover:border-[#4FC3F7] group-hover:bg-gradient-to-br group-hover:from-[#1E88E5]/30 group-hover:to-[#4FC3F7]/30 transition-all">
                         <svg class="w-7 h-7 text-[#4FC3F7] group-hover:text-[#1E88E5] transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
@@ -343,10 +361,13 @@
                         Data-driven digital marketing strategies to maximize your online presence and ROI.
                     </p>
                 </div>
+                </div>
+                </div>
+                <div class="swiper-pagination !relative !bottom-0 mt-4"></div>
             </div>
             
-            <div class="text-center mt-12 fade-in">
-                <a href="/services" class="inline-block px-8 py-4 bg-gradient-to-r from-[#1E88E5] to-[#4FC3F7] hover:from-[#1976D2] hover:to-[#29B6F6] text-white font-semibold rounded-lg shadow-lg hover:shadow-xl hover:shadow-[#1E88E5]/50 transform hover:scale-105 transition-all duration-300">
+            <div class="text-center mt-10 relative z-20" data-aos="fade-up">
+                <a href="/services" class="inline-block px-8 py-4 bg-gradient-to-r from-[#1E88E5] to-[#4FC3F7] hover:from-[#1976D2] hover:to-[#29B6F6] text-white font-semibold rounded-lg shadow-lg hover:shadow-xl hover:shadow-[#1E88E5]/50 transform hover:scale-105 transition-all duration-300 btn-lift">
                     View All Services →
                 </a>
             </div>
@@ -356,7 +377,7 @@
     <!-- CTA Section -->
     <section class="py-20 md:py-32 bg-gradient-to-br from-[#0F1F3A] via-[#0A1A2F] to-[#0F1F3A] border-t border-[#1E88E5]/20 relative overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-r from-[#1E88E5]/5 to-[#4FC3F7]/5"></div>
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in relative z-10">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in relative z-10" data-aos="fade-up">
             <h2 class="text-3xl md:text-5xl font-heading font-bold mb-6 text-[#F5F9FF]">Ready to Transform Your Business?</h2>
             <p class="text-lg md:text-xl mb-8 text-[#B0BEC5] max-w-2xl mx-auto font-body">
                 Get in touch with us today and let's discuss how our enterprise solutions can accelerate your digital transformation.
@@ -374,6 +395,14 @@
     
     <!-- Footer -->
     <div id="footer-container"></div>
+    <div id="toast-host" class="toast-host"></div>
+
+    <div id="gallery-modal" class="gallery-modal hidden">
+        <button id="gallery-modal-close" class="gallery-close" aria-label="Close">✕</button>
+        <button id="gallery-modal-prev" class="gallery-nav gallery-prev" aria-label="Previous">←</button>
+        <img id="gallery-modal-img" alt="Preview">
+        <button id="gallery-modal-next" class="gallery-nav gallery-next" aria-label="Next">→</button>
+    </div>
     
     <!-- Scripts -->
     <script src="js/components.js"></script>
@@ -389,6 +418,11 @@
     <script src="js/heroBackground.js"></script>
     <script src="js/counters.js"></script>
     <script src="js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/premium.js"></script>
     <script>
         // Ensure counters initialize after all scripts load
         function forceInitCounters() {
@@ -527,6 +561,12 @@
                     const mainContent = document.getElementById("main-content");
                     if (mainContent) {
                         mainContent.classList.add("show");
+                    }
+                    if (window.playHeroReveal) {
+                        window.playHeroReveal();
+                    }
+                    if (window.startHeroTyping) {
+                        setTimeout(window.startHeroTyping, 900);
                     }
                     destroySpinner();
                 }, 1800);

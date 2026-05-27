@@ -169,6 +169,9 @@ function createFooter() {
                             <li><a href="/services" class="text-[#B0BEC5] hover:text-[#4FC3F7] transition-colors font-body">Web Development</a></li>
                             <li><a href="/services" class="text-[#B0BEC5] hover:text-[#4FC3F7] transition-colors font-body">Digital Marketing</a></li>
                             <li><a href="/services" class="text-[#B0BEC5] hover:text-[#4FC3F7] transition-colors font-body">Graphic Design</a></li>
+                            <li><a href="/services#printing-services" class="text-[#B0BEC5] hover:text-[#4FC3F7] transition-colors font-body">ID Cards &amp; Printing</a></li>
+                            <li><a href="/services#printing-services" class="text-[#B0BEC5] hover:text-[#4FC3F7] transition-colors font-body">T-Shirt Printing</a></li>
+                            <li><a href="/services#printing-services" class="text-[#B0BEC5] hover:text-[#4FC3F7] transition-colors font-body">Letterheads &amp; Envelopes</a></li>
                             <li><a href="/services#ai-chatbots" class="text-[#B0BEC5] hover:text-[#4FC3F7] transition-colors font-body">AI Chatbots &amp; Custom Agents</a></li>
                         </ul>
                     </div>

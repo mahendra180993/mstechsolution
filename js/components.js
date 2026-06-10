@@ -180,7 +180,7 @@ function createFooter() {
                 <div class="border-t border-[#1E88E5]/20 pt-8 text-center text-[#B0BEC5]">
                     <p class="font-body">&copy; ${new Date().getFullYear()} MS Tech Solution. All rights reserved.</p>
                     <p class="mt-2 text-sm font-body">
-                        <a href="tel:+917995575773" class="text-[#B0BEC5] hover:text-[#4FC3F7] transition-colors">+91 79955 75773</a> | 
+                        <a href="tel:+919440462222" class="text-[#B0BEC5] hover:text-[#4FC3F7] transition-colors">+91 94404 62222</a> | 
                         <a href="mailto:hr.mstech.solution@gmail.com" class="text-[#B0BEC5] hover:text-[#4FC3F7] transition-colors">hr.mstech.solution@gmail.com</a>
                     </p>
                 </div>
@@ -328,8 +328,8 @@ setTimeout(initializeComponents, 600);
  * Creates WhatsApp and Phone buttons in bottom right corner
  */
 function createFloatingButtons() {
-    const phoneNumber = '+917995575773';
-    const whatsappNumber = '91995575773'; // WhatsApp format (without +)
+    const phoneNumber = '+919440462222';
+    const whatsappNumber = '919440462222'; // WhatsApp format (without +)
     
     return `
         <div id="floating-buttons" class="fixed bottom-6 right-6 z-50 flex flex-col gap-4 items-end">
@@ -348,7 +348,7 @@ function createFloatingButtons() {
                 <svg class="w-6 h-6 flex-shrink-0 order-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-                <span class="floating-btn-text hidden group-hover:inline-block whitespace-nowrap font-medium text-sm order-1">+91 79955 75773</span>
+                <span class="floating-btn-text hidden group-hover:inline-block whitespace-nowrap font-medium text-sm order-1">+91 94404 62222</span>
             </a>
         </div>
     `;

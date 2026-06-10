@@ -211,7 +211,7 @@ function initCounterEnhance() {
 }
 
 function initTiltCards() {
-    if (reducedMotion()) return;
+    if (reducedMotion() || (window.matchMedia && window.matchMedia('(hover: none)').matches)) return;
     document.querySelectorAll('.tilt-card').forEach((card) => {
         card.addEventListener('mousemove', (e) => {
             const r = card.getBoundingClientRect();
@@ -262,14 +262,16 @@ function initServiceSwiper() {
     if (host && host.dataset.swiperReady !== '1') {
         host.dataset.swiperReady = '1';
         // eslint-disable-next-line no-new
+        const isMobile = window.matchMedia('(max-width: 767px)').matches;
         new window.Swiper('#home-services-swiper', {
-            loop: true,
+            loop: !isMobile,
             slidesPerView: 1,
             spaceBetween: 18,
             speed: 800,
+            watchOverflow: true,
             autoplay: reducedMotion() ? false : { delay: 2300, disableOnInteraction: false },
             pagination: { el: '#home-services-swiper .swiper-pagination', clickable: true },
-            breakpoints: { 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } },
+            breakpoints: { 768: { slidesPerView: 2, loop: true }, 1024: { slidesPerView: 3, loop: true } },
         });
     }
 
@@ -278,10 +280,12 @@ function initServiceSwiper() {
         el.dataset.swiperReady = '1';
         const pagination = el.querySelector('.swiper-pagination');
         // eslint-disable-next-line no-new
+        const isMobile = window.matchMedia('(max-width: 767px)').matches;
         new window.Swiper(el, {
-            loop: true,
+            loop: !isMobile,
             slidesPerView: 1,
             speed: 700,
+            watchOverflow: true,
             autoplay: reducedMotion() ? false : { delay: 2200, disableOnInteraction: false },
             pagination: pagination ? { el: pagination, clickable: true } : undefined,
         });

@@ -20,9 +20,13 @@ function init() {
     navLinks = document.querySelectorAll('.nav-link, #mobile-menu a');
     fadeInElements = document.querySelectorAll('.fade-in');
     
-    // Initialize features
-    initNavbar();
-    initMobileMenu();
+    // Navbar/mobile menu are handled by components.js when overlay nav is present
+    const usesComponentNav = document.querySelector('.mobile-menu-overlay');
+    if (!usesComponentNav) {
+        initNavbar();
+        initMobileMenu();
+    }
+
     initSmoothScrolling();
     initScrollAnimations();
     initFormHandling();
@@ -268,6 +272,7 @@ function enhanceServiceCards() {
 function initParallax() {
     const hero = document.getElementById('hero');
     if (!hero) return;
+    if (window.matchMedia('(max-width: 767px)').matches) return;
 
     const heroContent = hero.querySelector('.gsap-hero');
     if (!heroContent) return;
@@ -312,8 +317,8 @@ function initFloatingButtons() {
     }
     
     // Fallback: Create buttons directly if components.js function not available
-    const phoneNumber = '+917995575773';
-    const whatsappNumber = '91995575773';
+    const phoneNumber = '+919440462222';
+    const whatsappNumber = '919440462222';
     
     const buttonsHTML = `
         <div id="floating-buttons" class="fixed bottom-6 right-6 z-50 flex flex-col gap-4 items-end">
@@ -329,7 +334,7 @@ function initFloatingButtons() {
                 <svg class="w-6 h-6 flex-shrink-0 order-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-                <span class="floating-btn-text hidden group-hover:inline-block whitespace-nowrap font-medium text-sm order-1">+91 79955 75773</span>
+                <span class="floating-btn-text hidden group-hover:inline-block whitespace-nowrap font-medium text-sm order-1">+91 94404 62222</span>
             </a>
         </div>
     `;

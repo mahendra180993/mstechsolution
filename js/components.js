@@ -158,6 +158,8 @@ function createFooter() {
                             <li><a href="/about" class="text-[#B0BEC5] hover:text-[#4FC3F7] transition-colors font-body">About Us</a></li>
                             <li><a href="/services" class="text-[#B0BEC5] hover:text-[#4FC3F7] transition-colors font-body">Services</a></li>
                             <li><a href="/contact" class="text-[#B0BEC5] hover:text-[#4FC3F7] transition-colors font-body">Contact Us</a></li>
+                            <li><a href="/privacy-policy" class="text-[#B0BEC5] hover:text-[#4FC3F7] transition-colors font-body">Privacy Policy</a></li>
+                            <li><a href="/terms-and-conditions" class="text-[#B0BEC5] hover:text-[#4FC3F7] transition-colors font-body">Terms &amp; Conditions</a></li>
                         </ul>
                     </div>
                     
@@ -179,6 +181,10 @@ function createFooter() {
                 
                 <div class="border-t border-[#1E88E5]/20 pt-8 text-center text-[#B0BEC5]">
                     <p class="font-body">&copy; ${new Date().getFullYear()} MS Tech Solution. All rights reserved.</p>
+                    <p class="mt-2 text-sm font-body">
+                        <a href="/privacy-policy" class="text-[#B0BEC5] hover:text-[#4FC3F7] transition-colors">Privacy Policy</a> |
+                        <a href="/terms-and-conditions" class="text-[#B0BEC5] hover:text-[#4FC3F7] transition-colors">Terms &amp; Conditions</a>
+                    </p>
                     <p class="mt-2 text-sm font-body">
                         <a href="tel:+919440462222" class="text-[#B0BEC5] hover:text-[#4FC3F7] transition-colors">+91 94404 62222</a> | 
                         <a href="mailto:hr.mstech.solution@gmail.com" class="text-[#B0BEC5] hover:text-[#4FC3F7] transition-colors">hr.mstech.solution@gmail.com</a>

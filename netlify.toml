@@ -32,6 +32,16 @@
   to = "/contact.html"
   status = 200
 
+[[redirects]]
+  from = "/privacy-policy"
+  to = "/privacy-policy.html"
+  status = 200
+
+[[redirects]]
+  from = "/terms-and-conditions"
+  to = "/terms-and-conditions.html"
+  status = 200
+
 # Redirect old .html URLs to clean URLs (301 permanent redirects)
 [[redirects]]
   from = "/index.html"
@@ -61,4 +71,14 @@
 [[redirects]]
   from = "/contact.html"
   to = "/contact"
+  status = 301
+
+[[redirects]]
+  from = "/privacy-policy.html"
+  to = "/privacy-policy"
+  status = 301
+
+[[redirects]]
+  from = "/terms-and-conditions.html"
+  to = "/terms-and-conditions"
   status = 301

@@ -47,9 +47,25 @@
     <!-- Contact Page -->
     <url>
         <loc>https://mstechsolution.in/contact</loc>
-        <lastmod>2024-01-01</lastmod>
+        <lastmod>2026-06-10</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
+    </url>
+
+    <!-- Privacy Policy -->
+    <url>
+        <loc>https://mstechsolution.in/privacy-policy</loc>
+        <lastmod>2026-06-10</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <!-- Terms and Conditions -->
+    <url>
+        <loc>https://mstechsolution.in/terms-and-conditions</loc>
+        <lastmod>2026-06-10</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
     </url>
     
 </urlset>

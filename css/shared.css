@@ -1000,3 +1000,40 @@ h1, h2, h3, h4 {
         font-size: 1.5rem;
     }
 }
+
+/* Google AdSense slots — hidden until an ad actually loads */
+.ms-ad-slot {
+    display: none;
+    width: 100%;
+    max-width: 728px;
+    margin: 2rem auto;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+    min-height: 0;
+}
+
+.ms-ad-slot.ad-slot--visible {
+    display: block;
+}
+
+.ms-ad-slot ins.adsbygoogle {
+    display: block;
+    margin: 0 auto;
+    min-height: 0;
+}
+
+.ms-ad-slot--wide {
+    max-width: 970px;
+}
+
+.ms-ad-slot--infeed {
+    max-width: 100%;
+}
+
+@media (max-width: 767px) {
+    .ms-ad-slot {
+        margin: 1.25rem auto;
+        max-width: 100%;
+    }
+}

@@ -4,6 +4,17 @@
  */
 
 /**
+ * Reusable Google AdSense slot placeholder.
+ * Hidden by default; ads.js shows it only when enabled and filled.
+ */
+function createAdSlot(slotKey, options = {}) {
+    const format = options.format || 'auto';
+    const wide = options.wide ? ' ms-ad-slot--wide' : '';
+    const infeed = options.infeed ? ' ms-ad-slot--infeed' : '';
+    return `<div class="ms-ad-slot${wide}${infeed}" data-ad-slot="${slotKey}" data-ad-format="${format}" hidden aria-hidden="true"></div>`;
+}
+
+/**
  * Navbar Component with Center Logo
  * Format: | Item | Item | Item | Item |   LOGO   | Item | Item | Item | Item |
  */

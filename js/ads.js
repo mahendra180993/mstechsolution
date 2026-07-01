@@ -4,7 +4,7 @@
  */
 (function () {
     const config = window.MS_ADS_CONFIG;
-    if (!config || !config.enabled || !config.client) return;
+    if (!config || !config.client || !config.enabled) return;
 
     let scriptRequested = false;
 

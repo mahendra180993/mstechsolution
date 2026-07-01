@@ -1,50 +1,44 @@
 /**
  * Google AdSense configuration — MS Tech Solution
  *
- * HOW TO ENABLE ADS IN THE FUTURE:
- * 1. Get AdSense approval for mstechsolution.in
- * 2. In AdSense dashboard, create ad units and copy each "data-ad-slot" ID
- * 3. Paste slot IDs below (replace empty strings)
- * 4. Set enabled: true
- * 5. Deploy — ads show ONLY when Google fills the slot; empty slots stay hidden
+ * STANDARD HTML SITE (not AMP):
+ * - Head script (adsbygoogle.js) is on every page
+ * - ads-auto.js runs after <body> for Google Auto ads
+ *
+ * OPTIONAL manual ad units (.ms-ad-slot):
+ * - Set enabled: true and add slot IDs when you create units in AdSense
+ *
+ * AMP ONLY (if you ever convert to AMP HTML):
+ * - Set isAmpSite: true and use valid AMP pages
  */
 window.MS_ADS_CONFIG = {
-    // Set to true only after AdSense is approved and slot IDs are added
-    enabled: false,
-
-    // Your publisher ID (already on the site)
     client: 'ca-pub-9548818639099496',
 
-    // Optional: use during testing in AdSense (set false for production)
-    testMode: false,
-
-    // Max milliseconds to wait before hiding an unfilled slot
-    fillTimeoutMs: 5000,
+    /**
+     * Google Auto ads — Google places ads automatically on the site.
+     * Uses the head script + page-level init in ads-auto.js
+     */
+    autoAdsEnabled: true,
 
     /**
-     * Ad unit slot IDs from AdSense dashboard.
-     * Leave empty until you create each unit — empty = no ad, no empty box.
+     * Optional manual ad units in .ms-ad-slot placeholders.
+     * Leave false until you add slot IDs below.
      */
+    enabled: false,
+
+    // AMP Auto ads — only for valid AMP HTML pages (this site is standard HTML)
+    isAmpSite: false,
+
+    testMode: false,
+    fillTimeoutMs: 5000,
+
     slots: {
-        // Homepage — between Stats and About
         'home-mid': '',
-
-        // Homepage — after Services section
         'home-services': '',
-
-        // Homepage — above footer
         'home-bottom': '',
-
-        // Services page — between service sections
         'services-mid': '',
-
-        // Services page — above footer
         'services-bottom': '',
-
-        // About, Projects, FAQ, Contact — mid content
         'page-mid': '',
-
-        // About, Projects, FAQ, Contact — above footer
         'page-bottom': '',
     },
 };

@@ -30,6 +30,7 @@
     <!-- Google Search Console Verification -->
     <meta name="google-site-verification" content="Lakaq8QNBlRoCZK6LVxX6rW7UUnT8jHRGUulFVt4PY4" />
     <meta name="google-adsense-account" content="ca-pub-9548818639099496">
+    <!-- Google AdSense: Auto ads script (every page) -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9548818639099496"
      crossorigin="anonymous"></script>
     
@@ -90,6 +91,9 @@
     <link rel="stylesheet" href="css/shared.css">
 </head>
 <body class="bg-[#0A1A2F] text-[#F5F9FF] antialiased font-body">
+    <!-- Google AdSense: Auto ads init (right after body) -->
+    <script src="js/ads-config.js"></script>
+    <script src="js/ads-auto.js"></script>
     <div id="scroll-progress" class="scroll-progress"></div>
     <div id="cursor-glow" class="cursor-glow"></div>
     <div id="cursor-dot" class="cursor-dot"></div>
@@ -343,7 +347,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/premium.js"></script>
-    <script src="js/ads-config.js"></script>
     <script src="js/ads.js"></script>
 </body>
 </html>
